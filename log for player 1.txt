@@ -1,0 +1,30 @@
+server -> player1 -> SETPLAYER 1
+server -> player1 -> PLAYING 0
+server -> player1 -> SHOW 0 green
+server -> player1 -> SHOW 1 green
+server -> player1 -> COVER 0 1
+
+server -> player1 -> PLAYING 1
+player1 -> server -> TRY card 2
+player1 -> server -> TRY card 3
+server -> player1 -> SHOW 2 blue
+server -> player1 -> SHOW 3 red
+server -> player1 -> COVER 2 3
+
+server -> player1 -> PLAYING 0
+server -> player1 -> SHOW 2 blue
+server -> player1 -> SHOW 4 blue
+server -> player1 -> COVER 2 4
+server -> player1 -> DISABLE 2 4
+
+
+server -> player1 -> PLAYING 1
+player1 -> server -> TRY card 5
+player1 -> server -> TRY card 3
+server -> player1 -> SHOW 5 red
+server -> player1 -> SHOW 3 red
+server -> player1 -> COVER 3 5
+server -> player1 -> PAIRS
+server -> player1 -> DISABLE 3 5
+
+server -> player1 -> LOSER
